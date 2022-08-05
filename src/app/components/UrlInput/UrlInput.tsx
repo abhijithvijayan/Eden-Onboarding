@@ -1,4 +1,4 @@
-import "./urlInput.styles.scss";
+import './urlInput.styles.scss';
 
 interface UrlInputProps {
   label: string;
@@ -22,7 +22,7 @@ export const UrlInput: React.FC<UrlInputProps> = ({
       <span className="url__input-label">{label}</span>
       <div className="url__input-holder">
         <div className="url__input-holder-url">
-            <span>{url}</span>
+          <span>{url}</span>
         </div>
         <input
           className="url__input-holder-input"
@@ -31,7 +31,7 @@ export const UrlInput: React.FC<UrlInputProps> = ({
           name={label}
           value={value}
           onChange={onChange}
-        ></input>
+        />
       </div>
     </div>
   );

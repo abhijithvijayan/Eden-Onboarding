@@ -1,4 +1,4 @@
-import { Logo } from "../icons/Logo";
+import {Logo} from '../icons/Logo';
 import './mainHeader.styles.scss';
 
 export const MainHeader = () => (

@@ -1,4 +1,4 @@
-import "./inputGroup.styles.scss";
+import './inputGroup.styles.scss';
 
 interface InputGroupProps {
   label: string;
@@ -23,7 +23,7 @@ export const InputGroup: React.FC<InputGroupProps> = ({
         type="text"
         value={value}
         name={label}
-      ></input>
+      />
     </div>
   );
 };

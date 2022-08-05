@@ -1,7 +1,7 @@
-import { FC } from "react";
-import { IconProps } from "./types";
+import {FC} from 'react';
+import {IconProps} from './types';
 
-export const UsersIcon: FC<IconProps> = ({ size, color }) => (
+export const UsersIcon: FC<IconProps> = ({size, color}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     color={color}
