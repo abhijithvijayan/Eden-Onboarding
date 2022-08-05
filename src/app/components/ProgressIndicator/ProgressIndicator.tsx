@@ -21,7 +21,9 @@ export const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({
       <div className="progress__indicator">
         <div
           className="progress__indicator-fill"
-          style={{width: `${(100 / length) * (onboardingStep + 1)}%`}}
+          style={{
+            width: `${Math.min(17 + 33 * onboardingStep, 100)}%`,
+          }}
         />
         {steps.map((step, index) => (
           <div
