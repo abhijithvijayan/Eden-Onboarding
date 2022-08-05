@@ -19,7 +19,9 @@ interface OnboardingContextProps {
   updateOnboardingData: (key: string, value: string | boolean) => void;
 }
 
-const OnboardingContext = React.createContext<OnboardingContextProps>(null!);
+const OnboardingContext = React.createContext<
+  OnboardingContextProps | undefined
+>(undefined);
 
 export const useOnboarding = (): OnboardingContextProps => {
   const context = React.useContext(OnboardingContext);

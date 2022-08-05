@@ -1,6 +1,6 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './app';
+import {App} from './app';
 import {OnboardingProvider} from './app/state/OnboardingProvider';
 import './styles/main.scss';
 
