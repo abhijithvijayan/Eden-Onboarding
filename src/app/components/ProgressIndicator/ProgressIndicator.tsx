@@ -16,13 +16,16 @@ export const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({
 
   const {onboardingStep} = useOnboarding();
 
+  const STEP = (100 / (length - 1)) * onboardingStep;
+  const progress = Math.min(17 + STEP, 100);
+
   return (
     <div className="progress__indicator-wrapper">
       <div className="progress__indicator">
         <div
           className="progress__indicator-fill"
           style={{
-            width: `${Math.min(17 + 33 * onboardingStep, 100)}%`,
+            width: `${progress}%`,
           }}
         />
         {steps.map((step, index) => (
