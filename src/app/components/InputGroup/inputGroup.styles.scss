@@ -1,0 +1,22 @@
+.input__group {
+    margin: 0.5rem 0;
+    min-width: 25rem;
+    box-sizing: border-box;
+    .input__group-label {
+        display: block;
+        color: #36445a;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    .input__group-input {
+        box-shadow: none;
+        border-radius: 2px;
+        border: 1px solid #f0f4f8;
+        width: 100%;
+        margin: 0.4rem 0;
+        height: 2.5rem;
+        color: #36445a;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+    }
+}

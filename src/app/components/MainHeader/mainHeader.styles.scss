@@ -1,0 +1,10 @@
+.main__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    .main__header-heading {
+        font-size: 2rem;
+        color: #131b28;
+    }
+}

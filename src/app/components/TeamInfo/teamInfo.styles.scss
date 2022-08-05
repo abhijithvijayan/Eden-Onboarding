@@ -1,0 +1,20 @@
+.team__info {
+  max-width: 10rem;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  .team__info-heading {
+    margin: 0.5rem 0;
+  }
+  .team__info-sub {
+    margin: 0;
+    color: #7a869c;
+    font-size: 0.8rem;
+  }
+  &.selected {
+    border-color: #664de5;
+  }
+}

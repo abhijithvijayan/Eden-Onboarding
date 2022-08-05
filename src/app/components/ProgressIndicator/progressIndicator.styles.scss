@@ -1,0 +1,38 @@
+.progress__indicator-wrapper {
+  display: flex;
+  justify-content: center;
+  .progress__indicator {
+    width: 20rem;
+    height: 2px;
+    background: #eff1f7;
+    position: relative;
+    margin: 3rem 0;
+    max-width: 20rem;
+    .progress__indicator-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: #664de5;
+    }
+    .progress__indicator-step {
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      margin-left: -1rem;
+      margin-top: -1rem;
+      top: 50%;
+      background: #eff1f7;
+      display: flex;
+      align-items: center;
+      border-radius: 100%;
+      justify-content: center;
+      border: 1px solid #eff1f7;
+      &.filled {
+        background: #664de5;
+        border-color: #664de5;
+        color: #fff;
+      }
+    }
+  }
+}
