@@ -26,7 +26,7 @@ export const StepUserData: React.FC<StepProps> = ({
     <div className="step">
       <Header
         title="Welcome! First things first..."
-        sub="You can always change them later"
+        sub="You can always change them later."
       />
       <div className="step__info">
         <InputGroup
@@ -61,7 +61,7 @@ export const StepWorkspace: React.FC<StepProps> = ({
     <div className="step">
       <Header
         title="Let's setup a home for all your work"
-        sub="You can always create another workspace later"
+        sub="You can always create another workspace later."
       />
       <div className="step__info workspace__container">
         <div className="workspace__container-info">
@@ -77,6 +77,7 @@ export const StepWorkspace: React.FC<StepProps> = ({
             url="www.eden.com/"
             placeholder="Example"
             label="Workspace URL"
+            hint={'(optional)'}
             value={workspaceUrl}
             onChange={(e: React.ChangeEvent<HTMLInputElement>): void =>
               onChange('workspaceUrl', e.target.value)
@@ -96,7 +97,7 @@ export const StepTeam: React.FC<StepProps> = ({data, onChange, onComplete}) => {
     <div className="step">
       <Header
         title="How are you planning to use Eden?"
-        sub="We'll streamline your setup experience accordingly"
+        sub="We'll streamline your setup experience accordingly."
       />
       <div className="step__info team__info-wrapper">
         <div className="team__info-wrapper-container">

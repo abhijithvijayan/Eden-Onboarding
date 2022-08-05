@@ -7,6 +7,7 @@ interface UrlInputProps {
   url: string;
   optional: boolean;
   value: string;
+  hint: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -16,10 +17,12 @@ export const UrlInput: React.FC<UrlInputProps> = ({
   url,
   onChange,
   value,
+  hint,
 }) => {
   return (
     <div className="url__input">
       <span className="url__input-label">{label}</span>
+      <span className="url__input-hint">{hint}</span>
       <div className="url__input-holder">
         <div className="url__input-holder-url">
           <span>{url}</span>
