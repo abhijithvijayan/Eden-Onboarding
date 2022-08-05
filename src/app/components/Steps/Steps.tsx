@@ -1,3 +1,4 @@
+import * as React from 'react';
 import {OnboardingData} from '../../state/OnboardingProvider';
 import {Button} from '../Button/Button';
 import {Header} from '../Header/Header';
@@ -30,7 +31,7 @@ export const StepUserData: React.FC<StepProps> = ({
       <div className="step__info">
         <InputGroup
           value={fullName}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          onChange={(e: React.ChangeEvent<HTMLInputElement>): void =>
             onChange('fullName', e.target.value)
           }
           placeholder="Steve Jobs"
@@ -38,7 +39,7 @@ export const StepUserData: React.FC<StepProps> = ({
         />
         <InputGroup
           value={displayName}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          onChange={(e: React.ChangeEvent<HTMLInputElement>): void =>
             onChange('displayName', e.target.value)
           }
           placeholder="Steve"
@@ -66,7 +67,7 @@ export const StepWorkspace: React.FC<StepProps> = ({
         <div className="workspace__container-info">
           <InputGroup
             value={workspaceName}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            onChange={(e: React.ChangeEvent<HTMLInputElement>): void =>
               onChange('workspaceName', e.target.value)
             }
             placeholder="Eden"
@@ -77,7 +78,7 @@ export const StepWorkspace: React.FC<StepProps> = ({
             placeholder="Example"
             label="Workspace URL"
             value={workspaceUrl}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            onChange={(e: React.ChangeEvent<HTMLInputElement>): void =>
               onChange('workspaceUrl', e.target.value)
             }
             optional
@@ -105,7 +106,7 @@ export const StepTeam: React.FC<StepProps> = ({data, onChange, onComplete}) => {
                 <UserIcon size={24} color={!isTeam ? '#664de5' : '#131b28'} />
               }
               selected={!isTeam}
-              onClick={() => onChange('isTeam', false)}
+              onClick={(): void => onChange('isTeam', false)}
               title="For myself"
               sub="Write better. Think more clearly. Stay organized"
             />
@@ -114,7 +115,7 @@ export const StepTeam: React.FC<StepProps> = ({data, onChange, onComplete}) => {
                 <UsersIcon color={isTeam ? '#664de5' : '#131b28'} size={24} />
               }
               selected={isTeam}
-              onClick={() => onChange('isTeam', true)}
+              onClick={(): void => onChange('isTeam', true)}
               title="With my team"
               sub="Wikis, docs, tasks & projects, all in one place"
             />

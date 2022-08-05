@@ -1,4 +1,4 @@
-import {FC} from 'react';
+import * as React from 'react';
 import './teamInfo.styles.scss';
 
 interface TeamInfoProps {
@@ -9,7 +9,7 @@ interface TeamInfoProps {
   onClick: () => void;
 }
 
-export const TeamInfo: FC<TeamInfoProps> = ({
+export const TeamInfo: React.FC<TeamInfoProps> = ({
   icon,
   selected,
   onClick,

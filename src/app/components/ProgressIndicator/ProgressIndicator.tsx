@@ -1,4 +1,4 @@
-import {FC, useMemo} from 'react';
+import * as React from 'react';
 import {useOnboarding} from '../../state/OnboardingProvider';
 import './progressIndicator.styles.scss';
 
@@ -6,8 +6,10 @@ interface ProgressIndicatorProps {
   length?: number;
 }
 
-export const ProgressIndicator: FC<ProgressIndicatorProps> = ({length = 4}) => {
-  const steps = useMemo(
+export const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({
+  length = 4,
+}) => {
+  const steps = React.useMemo(
     () => Array.from({length}, (_, i) => `progress__indicator${i}`),
     [length]
   );

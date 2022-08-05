@@ -1,4 +1,4 @@
-import {useMemo} from 'react';
+import * as React from 'react';
 import {
   StepComplete,
   StepTeam,
@@ -12,11 +12,14 @@ import {ProgressIndicator} from './components/ProgressIndicator/ProgressIndicato
 
 const steps = [StepUserData, StepWorkspace, StepTeam, StepComplete];
 
-export const App = () => {
+export const App: React.FC = () => {
   const {onboardingData, onboardingStep, updateStep, updateOnboardingData} =
     useOnboarding();
 
-  const StepElement = useMemo(() => steps[onboardingStep], [onboardingStep]);
+  const StepElement = React.useMemo(
+    () => steps[onboardingStep],
+    [onboardingStep]
+  );
 
   return (
     <div className="onboarding">

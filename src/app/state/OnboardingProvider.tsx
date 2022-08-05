@@ -1,4 +1,4 @@
-import {createContext, FC, useContext, useState} from 'react';
+import * as React from 'react';
 
 interface OnboardingProviderProps {
   children: React.ReactElement;
@@ -19,34 +19,38 @@ interface OnboardingContextProps {
   updateOnboardingData: (key: string, value: string | boolean) => void;
 }
 
-const OnboardingContext = createContext<OnboardingContextProps>(null!);
+const OnboardingContext = React.createContext<OnboardingContextProps>(null!);
 
-export const useOnboarding = () => {
-  const context = useContext(OnboardingContext);
+export const useOnboarding = (): OnboardingContextProps => {
+  const context = React.useContext(OnboardingContext);
   if (!context) {
     throw new Error('useOnboarding must be used within the OnboardingProvider');
   }
   return context;
 };
 
-export const OnboardingProvider: FC<OnboardingProviderProps> = ({children}) => {
-  const [onboardingData, setOnboardingData] = useState<OnboardingData>({
+export const OnboardingProvider: React.FC<OnboardingProviderProps> = ({
+  children,
+}) => {
+  const [onboardingData, setOnboardingData] = React.useState<OnboardingData>({
     fullName: '',
     displayName: '',
     workspaceName: '',
     workspaceUrl: '',
     isTeam: false,
   });
-  const [onboardingStep, setOnboardingStep] = useState(0);
+  const [onboardingStep, setOnboardingStep] = React.useState(0);
 
-  const updateStep = () => {
+  const updateStep = (): void => {
     setOnboardingStep(onboardingStep + 1);
   };
 
-  const updateOnboardingData = (key: string, value: string | boolean) => {
-    setOnboardingData({
-      ...onboardingData,
-      [key]: value,
+  const updateOnboardingData = (key: string, value: string | boolean): void => {
+    setOnboardingData((prev) => {
+      return {
+        ...prev,
+        [key]: value,
+      };
     });
   };
 

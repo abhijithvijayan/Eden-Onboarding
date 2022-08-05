@@ -1,3 +1,4 @@
+import * as React from 'react';
 import './inputGroup.styles.scss';
 
 interface InputGroupProps {

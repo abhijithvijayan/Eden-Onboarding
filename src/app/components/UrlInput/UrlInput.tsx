@@ -1,3 +1,4 @@
+import * as React from 'react';
 import './urlInput.styles.scss';
 
 interface UrlInputProps {
@@ -13,7 +14,6 @@ export const UrlInput: React.FC<UrlInputProps> = ({
   label,
   placeholder,
   url,
-  optional,
   onChange,
   value,
 }) => {
